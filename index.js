@@ -5,6 +5,15 @@ let arr = [
   { id: 104, task: "buy cockut" },
 ];
 
+document
+  .getElementById("taskInput")
+  .addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      document.getElementById("addBtn").click();
+    }
+  });
+
 document.getElementById("addBtn").addEventListener("click", () => {
   const inputValue = document.getElementById("taskInput").value;
   if (!inputValue.trim()) {
