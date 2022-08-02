@@ -26,11 +26,9 @@ function deleteItem() {
   //     .filter((item) => item.includes("taskid"))[0]
   //     .split("=")[1]
   // );
-  console.log(arr);
-  console.log(this.id);
-  arr.shift(this.id);
+  arr = arr.filter((val) => val.id !== +this.id);
+  console.log(arr.filter((val) => val.id !== +this.id));
   drawTaskList();
-  console.log(arr);
 }
 
 const drawTaskList = () => {
