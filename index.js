@@ -10,12 +10,16 @@ document
   .addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
       event.preventDefault();
-      document.getElementById("addBtn").click();
+      // document.getElementById("addBtn").click();
+      pressEn();
     }
   });
 
-document.getElementById("addBtn").addEventListener("click", () => {
+document.getElementById("addBtn").addEventListener("click", pressEn);
+
+function pressEn() {
   const inputValue = document.getElementById("taskInput").value;
+  const input = document.getElementById("taskInput");
   if (!inputValue.trim()) {
     alert("Neteisinga reikšmė");
   } else {
@@ -24,9 +28,11 @@ document.getElementById("addBtn").addEventListener("click", () => {
       task: inputValue,
     };
     arr.push(newTask);
+    input.value = null;
+    input.blur();
     drawTaskList();
   }
-});
+}
 
 function deleteItem() {
   // console.log(
