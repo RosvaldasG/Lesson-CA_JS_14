@@ -1,8 +1,8 @@
 let arr = [
-  { id: 101, task: "buy milk" },
-  { id: 102, task: "buy eggs" },
-  { id: 103, task: "buy bear" },
-  { id: 104, task: "buy cockut" },
+  // { id: 101, task: "buy milk" },
+  // { id: 102, task: "buy eggs" },
+  // { id: 103, task: "buy bear" },
+  // { id: 104, task: "buy cockut" },
 ];
 
 document
@@ -69,6 +69,7 @@ const drawTaskList = () => {
     delBut.setAttribute("type", "button");
 
     delBut.onclick = deleteItem;
+    // ------------
 
     //-------------
     myLabel.textContent = value.task;
