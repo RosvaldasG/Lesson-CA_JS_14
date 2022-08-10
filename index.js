@@ -80,11 +80,16 @@ const drawTaskList = () => {
     });
     // ------------
     editBut.addEventListener("click", () => {
-      console.log(value.id, ind);
+      const editTask = prompt("Įvesk atnaujintą užduotį", value.task);
 
-      let corTask = prompt();
-      console.log(corTask);
-      // arr = arr.filter((val) => val.id !== value.id);
+      if (editTask?.trim()) {
+        const editNewTask = {
+          id: value.id,
+          task: editTask,
+        };
+        arr.splice(ind, 1, editNewTask);
+        drawTaskList();
+      }
     });
     //-------------
     myLabel.textContent = value.task;
