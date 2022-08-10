@@ -84,9 +84,11 @@ const drawTaskList = () => {
 
       if (editTask?.trim()) {
         const editNewTask = {
-          id: value.id,
+          ...value,
+          // id: value.id,
           task: editTask,
         };
+
         arr.splice(ind, 1, editNewTask);
         drawTaskList();
       }
