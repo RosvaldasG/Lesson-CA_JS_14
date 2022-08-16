@@ -16,8 +16,8 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-2" id="firstRow"><h2>ToDo list:</h2></div>
-        <div class="col"><h2>Rosvaldas</h2></div>
+        <div class="col-6" id="firstRow"><h2>ToDo list:</h2></div>
+        <div class="col-6"><h2>Rosvaldas</h2></div>
       </div>
       <div class="row">
         <div class="col-6">
@@ -37,8 +37,26 @@
           </button>
         </div>
       </div>
+      <div class="row mb-3">
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button
+            type="button"
+            class="btn btn-outline-info col-3"
+            id="sortByName"
+          >
+            Sort by name
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-info col-3"
+            id="sortByDate"
+          >
+            Sort by date
+          </button>
+        </div>
+      </div>
       <div class="row">
-        <div class="col-8">
+        <div class="col-12">
           <ul class="list-group" id="taskList">
             <!-- <li class="list-group-item">
             <input
